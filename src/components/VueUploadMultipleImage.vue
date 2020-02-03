@@ -157,7 +157,11 @@ export default {
     idEdit: {
       type: String,
       default: 'image-edit'
-    }
+    },
+    maxSize : {
+      type: Number,
+      default: 1000000, //1MB
+    },
   },
   data () {
     return {
@@ -213,6 +217,7 @@ export default {
       this.isDragover = true
     },
     createImage (file) {
+      if (file.size > this.maxSize) this.$emit('upload-failed', 'image size too big')
       let reader = new FileReader()
       let formData = new FormData()
       formData.append('file', file)
