@@ -217,7 +217,10 @@ export default {
       this.isDragover = true
     },
     createImage (file) {
-      if (file.size > this.maxSize) this.$emit('upload-failed', 'image size too big')
+      if (file.size > this.maxSize) {
+        this.$emit('size-overflowed', (this.maxSize, file.size))
+        return
+      }
       let reader = new FileReader()
       let formData = new FormData()
       formData.append('file', file)

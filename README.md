@@ -247,6 +247,12 @@ a {
       <td>5</td>
       <td>Maximum upload image</td>
     </tr>
+    <tr>
+      <td>maxSize</td>
+      <td>Number</td>
+      <td>5</td>
+      <td>Maximum upload image size in bytes</td>
+    </tr>
   </tbody>
 </table>
 
@@ -284,6 +290,11 @@ a {
       <td>limit-exceeded</td>
       <td>amount</td>
       <td>Limit exceeded images when drop</td>
+    </tr>
+    <tr>
+      <td>size-overflowed</td>
+      <td>(maxSize, imageSize)</td>
+      <td>Image size too big</td>
     </tr>
   </tbody>
 </table>
