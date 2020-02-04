@@ -250,8 +250,8 @@ a {
     <tr>
       <td>maxSize</td>
       <td>Number</td>
-      <td>5</td>
-      <td>Maximum upload image size in bytes</td>
+      <td>1000000</td>
+      <td>Maximum upload image size in bytes (default -- 1MB)</td>
     </tr>
   </tbody>
 </table>
