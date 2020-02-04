@@ -218,7 +218,7 @@ export default {
     },
     createImage (file) {
       if (file.size > this.maxSize) {
-        this.$emit('size-overflowed', (this.maxSize, file.size))
+        this.$emit('size-overflowed', this.maxSize, file.size)
         return
       }
       let reader = new FileReader()
